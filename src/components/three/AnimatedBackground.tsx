@@ -3,7 +3,7 @@ import * as THREE from 'three';
 
 export default function AnimatedBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     if (!containerRef.current) return;
